@@ -57,12 +57,25 @@ interface GlobeProps {
   overlayColor?: string;
 }
 
+const defaultProps: GlobeProps = {
+  size: 300,
+  offsetX: 0,
+  offsetY: 0,
+  animateToX: 180,
+  animateToY: 30,
+  duration: 1500,
+  grid: false,
+  animate: false,
+  overlayColor:
+    "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 200))",
+};
+
 /**
  * Render a Globe
  * @returns React.Node
  */
 
-const Globe: React.FC<GlobeProps> = (props: GlobeProps) => {
+const Globe = (props: GlobeProps) => {
   const canvasContainerRef = useRef<HTMLDivElement>(null);
 
   const scale = props.size;
@@ -259,16 +272,18 @@ const Globe: React.FC<GlobeProps> = (props: GlobeProps) => {
   );
 };
 
-Globe.defaultProps = {
-  offsetX: 0,
-  offsetY: 0,
-  animateToX: 180,
-  animateToY: 30,
-  duration: 1500,
-  grid: false,
-  animate: false,
-  overlayColor:
-    "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 200))",
-};
+// Globe.defaultProps = {
+//   offsetX: 0,
+//   offsetY: 0,
+//   animateToX: 180,
+//   animateToY: 30,
+//   duration: 1500,
+//   grid: false,
+//   animate: false,
+//   overlayColor:
+//     "linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 200))",
+// };
+
+Globe.defaultProps = defaultProps;
 
 export default Globe;
