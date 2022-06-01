@@ -1,6 +1,7 @@
 import React from "react";
 import Button, { ButtonType } from "./components/Buttons";
 import Globe from "./components/Globe";
+import Chart from "./components/Chart";
 
 export default {
   title: "버튼",
@@ -36,3 +37,13 @@ export const test = () => {
     />
   );
 };
+
+// export const asdf = () => {
+//   const data = [
+//     { createTime: "2022-05-30T18:03:01.710Z", currency: 1.5 },
+//     { createTime: "2022-05-30T18:03:01.710Z", currency: 1.5 },
+//     { createTime: "2022-05-30T18:03:01.710Z", currency: 1.5 },
+//     { createTime: "2022-05-30T18:03:01.710Z", currency: 1.5 },
+//   ];
+//   return <Chart items={data} />;
+// };
