@@ -1,7 +1,7 @@
 {
-  "name": "globe",
+  "name": "design-system-study",
   "version": "0.0.1",
-  "description": "react 3d globe with d3",
+  "description": "react design-system study",
   "main": "./dist/bundle.js",
   "author": "TK",
   "license": "MIT",
